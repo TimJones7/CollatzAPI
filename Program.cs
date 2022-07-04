@@ -67,4 +67,21 @@ app.MapGet("/GetLeadingDigitDistributionOfPathFrom/{x}", (int x) =>
 .WithName("GetLeadingDigitDistribution");
 
 
+app.MapGet("/ListMethods", () =>
+{
+    return "METHODS AVAILABLE IN COLLATZ COLLAPSER MINIMAL API:" +
+    " ....../GetPathFromNumber/{x} ..... (input x => int)(returns => List of int)" +
+    " ....../GetCommonAncestor/{x}/{y} ..... (input x, y => int)(returns => int)" +
+    " ....../GetLeadingDigitDistributionOfPathFrom/{x} ..... (input x => int)(returns => dict )";
+})
+.WithName("ListAPIMethods");
+
+
+
+
+
+
+
+
+
 app.Run();
